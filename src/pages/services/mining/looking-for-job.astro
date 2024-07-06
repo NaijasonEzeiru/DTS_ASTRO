@@ -1,0 +1,165 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  content="Looking for job - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
+  title="Looking for job - Dynamic Total Services"
+>
+  <main>
+    <header class="m-auto py-8 bg-secondaryBg pt-16">
+      <h1 class="text-3xl font-bold mb-4 text-center text-white">
+        Looking For Work?
+      </h1>
+    </header>
+    <div
+      class="py-9 px-3 md:px-14 lg:px-32 min-h-[80vh] flex flex-col justify-center"
+    >
+      <h4 class="text-lg mb-6">
+        The projects that you want with a say in the roaster that works for you.
+      </h4>
+      <form id="job-form" class="flex flex-col gap-2">
+        <span class="flex flex-col gap-2 md:flex-row">
+          <label class="w-full">
+            <p>
+              First Name:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="text"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              id="job-first-name"
+              required
+              minlength="2"
+              maxlength="20"
+            />
+          </label>
+          <label class="w-full">
+            <p>
+              Last Name:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="text"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              required
+              id="job-last-name"
+              minlength="2"
+              maxlength="20"
+            />
+          </label>
+        </span>
+        <span class="flex flex-col gap-2 md:flex-row">
+          <label class="w-full">
+            <p>
+              Email Address:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="email"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              id="job-email"
+              required
+              maxlength="40"
+            />
+          </label>
+          <label class="w-full">
+            <p>Qualifications:</p>
+            <input
+              type="text"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              id="job-qualifications"
+              minlength="3"
+              maxlength="40"
+            />
+          </label>
+        </span>
+        <label>
+          <p>
+            Subject: <span class="text-xs font-light italic">(required)</span>
+          </p>
+          <input
+            type="text"
+            class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+            required
+            id="job-subject"
+            maxlength="100"
+          />
+        </label>
+        <label>
+          <p>
+            Message: <span class="text-xs font-light italic">(required)</span>
+          </p>
+          <textarea
+            name=""
+            id="job-message"
+            cols="30"
+            rows="10"
+            class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent rounded-md"
+            minlength="20"
+            required></textarea>
+        </label>
+        <button
+          id="lkj-submit-btn"
+          class="py-3 px-20 bg-goldColor disabled:bg-gray-300 dark:disabled:bg-gray-900 text-white rounded-lg w-max self-center"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const jobForm = document.getElementById("job-form") as HTMLFormElement;
+  const jobFirstName = document.getElementById(
+    "job-first-name"
+  ) as HTMLInputElement;
+  const jobLastName = document.getElementById(
+    "job-last-name"
+  ) as HTMLInputElement;
+  const jobEmail = document.getElementById("job-email") as HTMLInputElement;
+  const jobQualifications = document.getElementById(
+    "job-qualifications"
+  ) as HTMLInputElement;
+  const jobSubject = document.getElementById("job-subject") as HTMLInputElement;
+  const jobMessage = document.getElementById("job-message") as HTMLInputElement;
+  const LKJSubmitBtn = document.getElementById(
+    "lkj-submit-btn"
+  ) as HTMLButtonElement;
+
+  jobForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    LKJSubmitBtn.disabled = true;
+    try {
+      const res = await fetch("https://emails-forwarding.onrender.com/dts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          form: "Looking for Job",
+          subject: jobSubject.value,
+          firstName: jobFirstName.value,
+          lastName: jobLastName.value,
+          email: jobEmail.value,
+          qualifications: jobQualifications.value,
+          message: jobMessage.value,
+        }),
+      });
+      const response = await res.json();
+      if (res.ok) {
+        alert(response?.message);
+      } else if (response?.message) {
+        alert(response?.message);
+      } else {
+        alert("Form could not be submitted. Something went wrong");
+      }
+    } catch (err) {
+      alert("Form could not be submitted. Something went wrong");
+    }
+    LKJSubmitBtn.disabled = false;
+    jobForm.reset();
+  });
+</script>

@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import helmet from "../images/helmet.png";
+---
+
+<Layout
+  title="Dynamic Total Services"
+  content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
+>
+  <main
+    class="pt-20 pb-8 px-3 md:px-14 lg:px-32 bg-secondaryBg text-white text-lg"
+  >
+    <div class="py-32 flex md:min-h-[calc(100vh-56px)] items-center gap-7">
+      <div class="grow">
+        <h2 class="text-4xl text-goldColor mb-4">
+          Welcome to Dynamic Total Services
+        </h2>
+        <p class="md:border-2 border-[#e2b355c4] rounded-xl md:p-5">
+          Dynamic Total Services is your go-to partner for <span
+            class="text-goldColor uppercase">top-quality</span
+          > rubber lining services and <span class="text-goldColor uppercase"
+            >expert employment solutions</span
+          > in the mining sector. Whether you’re looking to protect your
+          equipment with durable rubber linings or seeking to connect with the <span
+            class="text-goldColor uppercase"
+          >
+            best talent in the mining industry
+          </span>, we’ve got you covered.
+        </p>
+      </div>
+      <!-- <Image
+        src={helmet}
+        alt="safety helmet"
+        class="hidden lg:block grow"
+        width="420"
+        height="365"
+      /> -->
+      <img src="/helmet.png" alt="safety helmet" class="hidden lg:block grow" />
+    </div>
+
+    <div class="flex md:flex-row flex-col gap-6 justify-between">
+      <div
+        class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/miners.png')]"
+      >
+        <div
+          class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"
+        >
+          <p class="text-justify">
+            In the dynamic world of mining, finding the right job or the perfect
+            candidate can be challenging. Dynamic Total Services bridges this
+            gap by providing comprehensive employment solutions tailored to the
+            mining sector.
+          </p>
+          <a
+            href="/services/mining"
+            class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]"
+          >
+            Checkout Our Mining Services
+          </a>
+        </div>
+      </div>
+      <div
+        class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/rubber-lining.png')]"
+      >
+        <div
+          class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"
+        >
+          <p class="text-justify">
+            Protecting your equipment from wear and tear is essential for
+            maintaining productivity. At Dynamic Total Services, we specialize
+            in providing top-tier rubber lining services to extend the lifespan
+            of your machinery.
+          </p>
+          <a
+            href="/services/rubber-lining"
+            class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]"
+          >
+            Checkout Our Rubber Lining Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

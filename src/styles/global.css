@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+  :root[data-color-mode="light"] {
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #00043c;
+    --gold-color: #e2b355;
+    --primary-text-color: #000;
+    --secondary-bg-color-2: #ebedf7;
+    --primary-cta-color: #00043c;
+  }
+  :root[data-color-mode="dark"] {
+    --primary-bg-color: #121212;
+    --secondary-bg-color: #1c1c1c;
+    --gold-color: #e2b355;
+    --primary-text-color: #fff;
+    --secondary-bg-color-2: #1c1c1c;
+    --primary-cta-color: #babef6;
+  }
+}
+
+.gar {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grd {
+    background: linear-gradient(
+      215deg,
+      rgba(226, 179, 85, 0.54) 0%,
+      #00043c 74%,
+      /* rgba(123, 99, 74, 0.75) 67.96%, */ #00043c 98.43%
+    );
+  }
+}
+@media (min-width: 800px) {
+  .grd {
+    background: linear-gradient(
+      215deg,
+      rgba(226, 179, 85, 0.54) 0%,
+      #00043c 50%
+    );
+  }
+}

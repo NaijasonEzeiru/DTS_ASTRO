@@ -1,0 +1,172 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Looking for people - Dynamic Total Services"
+  content="Looking for people - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
+>
+  <main>
+    <header class="m-auto py-8 bg-secondaryBg pt-16">
+      <h1 class="text-3xl font-bold mb-4 text-center text-white">
+        Looking For People?
+      </h1>
+    </header>
+    <div
+      class="py-9 px-3 md:px-14 lg:px-32 min-h-[80vh] flex flex-col justify-center"
+    >
+      <h4 class="text-lg mb-6">
+        We have experienced staff on a casual basis for short or long term
+        projects
+      </h4>
+      <form id="people-form" class="flex flex-col gap-2">
+        <span class="flex flex-col gap-2 md:flex-row">
+          <label class="w-full">
+            <p>
+              First Name:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="text"
+              id="people-first-name"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              required
+              minlength="2"
+              maxlength="20"
+            />
+          </label>
+          <label class="w-full">
+            <p>
+              Last Name:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="text"
+              id="people-last-name"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              required
+              minlength="2"
+              maxlength="20"
+            />
+          </label>
+        </span>
+        <span class="flex flex-col gap-2 md:flex-row">
+          <label class="w-full">
+            <p>Business Name:</p>
+            <input
+              type="text"
+              id="people-business-name"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              minlength="3"
+              maxlength="40"
+            />
+          </label>
+          <label class="w-full">
+            <p>
+              Email Address:
+              <span class="text-xs font-light italic">(required)</span>
+            </p>
+            <input
+              type="email"
+              id="people-email"
+              class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+              required
+              maxlength="40"
+            />
+          </label>
+        </span>
+        <label>
+          <p>
+            Subject: <span class="text-xs font-light italic">(required)</span>
+          </p>
+          <input
+            type="text"
+            id="people-subject"
+            class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent h-9 rounded-md"
+            required
+            maxlength="100"
+          />
+        </label>
+        <label>
+          <p>
+            Message: <span class="text-xs font-light italic">(required)</span>
+          </p>
+          <textarea
+            id="people-message"
+            cols="30"
+            rows="10"
+            class="w-full border border-gray-500 invalid:text-red-600 px-2 bg-transparent rounded-md"
+            minlength="20"
+            required></textarea>
+        </label>
+        <button
+          id="lfw-submit-btn"
+          class="py-3 px-20 bg-goldColor disabled:bg-gray-300 dark:disabled:bg-gray-900 text-white rounded-lg w-max self-center"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // Looking for people?
+  const peopleForm = document.getElementById("people-form") as HTMLFormElement;
+  const peopleFirstName = document.getElementById(
+    "people-first-name"
+  ) as HTMLInputElement;
+  const peopleLastName = document.getElementById(
+    "people-last-name"
+  ) as HTMLInputElement;
+  const peopleEmail = document.getElementById(
+    "people-email"
+  ) as HTMLInputElement;
+  const peopleBusinessName = document.getElementById(
+    "people-business-name"
+  ) as HTMLInputElement;
+  const peopleSubject = document.getElementById(
+    "people-subject"
+  ) as HTMLInputElement;
+  const peopleMessage = document.getElementById(
+    "people-message"
+  ) as HTMLInputElement;
+  const LFWSubmitBtn = document.getElementById(
+    "lfw-submit-btn"
+  ) as HTMLButtonElement;
+
+  peopleForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    LFWSubmitBtn.disabled = true;
+    try {
+      const res = await fetch("https://emails-forwarding.onrender.com/dts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          form: "Looking For People",
+          subject: peopleSubject?.value,
+          firstName: peopleFirstName.value,
+          lastName: peopleLastName.value,
+          email: peopleEmail.value,
+          businessName: peopleBusinessName.value,
+          message: peopleMessage.value,
+        }),
+      });
+      const response = await res.json();
+      if (res.ok) {
+        alert(response?.message);
+      } else if (response?.message) {
+        alert(response?.message);
+      } else {
+        alert("Form could not be submitted. Something went wrong");
+      }
+    } catch (err) {
+      alert("Form could not be submitted. Something went wrong");
+    }
+    LFWSubmitBtn.disabled = false;
+    peopleForm.reset();
+  });
+</script>
