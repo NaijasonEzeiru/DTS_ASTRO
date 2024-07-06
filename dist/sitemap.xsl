@@ -10,7 +10,7 @@
             <head>
             <link rel="icon" type="image/svg+xml" href="icon.svg" />
                 <title>Sitemap - Dynamic Total Services</title>
-                <link rel="stylesheet" href="/_astro/FAQS.BHA5BCfb.css" />
+                <link rel="stylesheet" href="/_astro/FAQS.ColUXRkX.css" />
             </head>
             <body class="py-9 px-3 flex md:px-14 lg:px-32">
                 <div class="w-full">
@@ -30,3 +30,5 @@
         </a>
     </xsl:template>
 </xsl:stylesheet>
+
+<!-- <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?> -->

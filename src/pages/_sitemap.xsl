@@ -30,3 +30,5 @@
         </a>
     </xsl:template>
 </xsl:stylesheet>
+
+<!-- <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?> -->
