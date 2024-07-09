@@ -115,7 +115,7 @@ const { title, content } = Astro.props;
           </menu>
         </details>
         <hr class="opacity-20" />
-        <a class="hover:underline" href="/about">
+        <a class="hover:underline" href="/about-us">
           <p class="table px-3 w-full cursor-pointer">About Us</p>
         </a>
         <hr class="opacity-20" />
@@ -174,39 +174,57 @@ const { title, content } = Astro.props;
         </span>
         <span class="md:text-left">
           <h5 class="text-base font-semibold">DTS</h5>
-          <a class="hover:underline" href="/services/labour-hire">
-            <p>Labour Hire</p>
-          </a>
-          <a class="hover:underline" href="/services/rubber-lining">
-            <p>Rubber Lining</p>
+          <a
+            class="hover:underline block w-fit mx-auto md:mx-0"
+            href="/services/labour-hire"
+          >
+            Labour Hire
           </a>
           <a
-            class="hover:underline"
+            class="hover:underline block w-fit mx-auto md:mx-0"
+            href="/services/rubber-lining"
+          >
+            Rubber Lining
+          </a>
+          <a
+            class="hover:underline block w-fit mx-auto md:mx-0"
             href="/services/labour-hire/looking-for-people"
           >
-            <p>Looking for People</p>
+            Looking for People
           </a>
           <a
             class="hover:underline"
             href="/services/labour-hire/looking-for-job"
           >
-            <p>Looking for Work</p>
+            Looking for Work
           </a>
         </span>
         <span class="md:text-left">
           <h5 class="text-base font-semibold">ABOUT US</h5>
-          <a class="hover:underline" href="/FAQS">
-            <p>FAQs</p>
-          </a>
-          <a class="hover:underline" href="/about">
-            <p>About Us</p>
-          </a>
-          <a class="hover:underline" href="/terms-and-conditions">
-            <p>Terms & Conditions</p>
-          </a>
-          <a class="hover:underline" href="/sitemap-0.xml">
-            <p>Sitemap</p>
-          </a>
+          <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/FAQS">
+            FAQs
+          </a> -->
+          <a
+            class="hover:underline block w-fit mx-auto md:mx-0"
+            href="/about-us"
+          >
+            About Us</a
+          >
+          <a
+            class="hover:underline block w-fit mx-auto md:mx-0"
+            href="/contact-us"
+          >
+            Contact Us</a
+          >
+          <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/terms-and-conditions">
+            Terms & Conditions
+          </a> -->
+          <a
+            class="hover:underline block w-fit mx-auto md:mx-0"
+            href="/sitemap-0.xml"
+          >
+            Sitemap</a
+          >
         </span>
       </div>
       <p>2022 &copy; DYNAMIC TOTAL SERVICES, Inc. All Rights Reserved.</p>
@@ -224,8 +242,6 @@ const { title, content } = Astro.props;
       const detailsToggle = document.getElementById("resources-menu");
       const menu = document.querySelector("menu");
 
-      let x = !menuIcon.getAttribute("aria-expanded");
-
       const menuClassLists = [
         "duration-1000",
         "before:-rotate-45",
@@ -240,9 +256,19 @@ const { title, content } = Astro.props;
         "after:transition-transform",
       ];
 
-      const setHam = () => {
-        ham = !ham;
-      };
+      function closeMenu() {
+        ham = false;
+        menuIcon.setAttribute("aria-expanded", "false");
+        menuShape.classList.remove(...menuClassLists);
+        navBar.classList.add("-translate-x-full");
+      }
+
+      function openMenu() {
+        ham = true;
+        menuIcon.setAttribute("aria-expanded", "true");
+        menuShape.classList.add(...menuClassLists);
+        navBar.classList.remove("-translate-x-full");
+      }
 
       function toggleTheme() {
         if (
@@ -269,7 +295,6 @@ const { title, content } = Astro.props;
       }
 
       function colorMode() {
-        console.log({ check: localStorage.getItem("data-color-mode") });
         if (
           localStorage.getItem("data-color-mode") === "dark" ||
           (matcher.matches && !localStorage.getItem("data-color-mode"))
@@ -282,31 +307,18 @@ const { title, content } = Astro.props;
           sunIcon.setAttribute("class", "hidden");
           document.documentElement.setAttribute("data-color-mode", "light");
         }
+        closeMenu();
+        detailsToggle.removeAttribute("open");
       }
       colorMode();
 
       function menuToggle() {
-        x = !x;
-        menuIcon.setAttribute("aria-expanded", x.toString());
-        setHam();
         if (ham) {
-          menuShape.classList.add(...menuClassLists);
-          navBar.classList.remove("-translate-x-full");
+          closeMenu();
         } else {
-          menuShape.classList.remove(...menuClassLists);
-          navBar.classList.add("-translate-x-full");
+          openMenu();
         }
       }
-
-      //   window.onclick = function (event: any) {
-      //     if (!event.target.matches("#menu-icon")) {
-      //       ham = false;
-      //       x = false;
-      //       menuIcon.setAttribute("aria-expanded", x.toString());
-      //       menuShape.classList.remove(...menuClassLists);
-      //       navBar.classList.add("-translate-x-full");
-      //     }
-      //   };
 
       document.addEventListener("astro:after-swap", colorMode);
       menuIcon.addEventListener("click", menuToggle);
@@ -322,11 +334,6 @@ const { title, content } = Astro.props;
           !detailsToggle?.contains(e.target) &&
           !e.target?.matches("#detailsToggle")
         ) {
-          ham = false;
-          x = false;
-          menuIcon.setAttribute("aria-expanded", x.toString());
-          menuShape.classList.remove(...menuClassLists);
-          navBar.classList.add("-translate-x-full");
         }
       });
     </script>
