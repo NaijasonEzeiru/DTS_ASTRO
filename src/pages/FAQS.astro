@@ -1,12 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade, slide, ViewTransitions } from "astro:transitions";
 ---
 
 <Layout
   title="FAQs - Dynamic Total Services"
   content="Frequently Asked Questions - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
 >
-  <main class="">
+  <main
+    transition:name="main"
+    transition:animate={slide({ duration: "0.4s" })}
+    class=""
+  >
     <header class="m-auto py-8 bg-secondaryBg pt-16">
       <h1 class="text-3xl font-bold mb-4 text-center text-white">
         Frequently Asked Questions

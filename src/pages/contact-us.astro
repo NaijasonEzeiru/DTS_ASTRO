@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade, slide, ViewTransitions } from "astro:transitions";
 ---
 
 <Layout
   title="Contact us - Dynamic Total Services"
   content="Contact us - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
 >
-  <main>
+  <main transition:name="main" transition:animate={slide({ duration: "0.4s" })}>
     <header class="m-auto py-8 bg-secondaryBg pt-16">
       <h1 class="text-3xl font-bold mb-4 text-center text-white">Contact Us</h1>
     </header>
@@ -75,9 +76,9 @@ import Layout from "../layouts/Layout.astro";
           Submit
         </button>
       </form>
-      <h4 class="md:text-center text-2xl font-semibold mb-1">Our Contacts:</h4>
+      <h4 class="text-2xl font-semibold mb-2">Our Contacts:</h4>
       <div class="flex flex-col gap-4">
-        <div class="flex flex-col md:flex-row md:justify-between gap-3">
+        <div class="grid md:grid-rows-2 md:grid-flow-col gap-3">
           <span>
             <h5 class="text-xl font-medium">Director</h5>
             <div class="flex gap-1 items-center">
@@ -216,9 +217,9 @@ import Layout from "../layouts/Layout.astro";
               </div></a
             >
           </span>
-          <div>
-            <h5 class="text-xl font-medium">Address</h5>
-            <address class="flex gap-1 md:justify-center items-center">
+          <span>
+            <h5 class="text-xl font-medium">General Manager</h5>
+            <div class="flex gap-1 items-center">
               <span class="text-goldColor"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -230,24 +231,161 @@ import Layout from "../layouts/Layout.astro";
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-map-pin"
+                  class="lucide lucide-user"
                 >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                  ></path>
-                  <circle cx="12" cy="10" r="3"></circle></svg
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle></svg
                 ></span
               >
-               3/11 Worcestor Bend, Davenport WA 6230
-            </address>
-          </div>
+              <h6>Ivin Hamann</h6>
+            </div>
+            <a
+              class="hover:underline"
+              href="mailto:ivin@dynamictotalservices.com.au"
+              ><div class="flex gap-1 items-center">
+                <span class="text-goldColor"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                    ></path></svg
+                  ></span
+                >ivin@dynamictotalservices.com.au
+              </div></a
+            >
+            <a class="hover:underline" href="tel:0400872388">
+              <div class="flex gap-1 items-center">
+                <span class="text-goldColor"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-phone"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path></svg
+                  ></span
+                >0400872388
+              </div></a
+            >
+          </span>
+          <span>
+            <h5 class="text-xl font-medium">HR & Mobilisation Manager</h5>
+            <div class="flex gap-1 items-center">
+              <span class="text-goldColor"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-user"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle></svg
+                ></span
+              >
+              <h6>Rebecca Wilson</h6>
+            </div>
+            <a
+              class="hover:underline"
+              href="mailto:rebecca@dynamictotalservices.com.au"
+              ><div class="flex gap-1 items-center">
+                <span class="text-goldColor"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                    ></path></svg
+                  ></span
+                >rebecca@dynamictotalservices.com.au
+              </div></a
+            >
+            <a class="hover:underline" href="tel:0459960795">
+              <div class="flex gap-1 items-center">
+                <span class="text-goldColor"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-phone"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path></svg
+                  ></span
+                >0459960795
+              </div></a
+            >
+          </span>
         </div>
-        <div class="md:text-center">
+        <div>
+          <h5 class="text-xl font-medium">Address</h5>
+          <address class="flex gap-1 items-center">
+            <span class="text-goldColor"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle></svg
+              ></span
+            >
+             3/11 Worcestor Bend, Davenport WA 6230
+          </address>
+        </div>
+        <div>
           <h5 class="text-xl font-medium">Enquiries</h5>
           <a
             class="hover:underline"
             href="mailto:info@dynamictotalservices.com.au"
           >
-            <div class="flex gap-1 md:justify-center items-center">
+            <div class="flex gap-1 items-center">
               <span class="text-goldColor"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"

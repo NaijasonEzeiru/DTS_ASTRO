@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade, slide, ViewTransitions } from "astro:transitions";
 import { Image } from "astro:assets";
 import helmet from "../images/helmet.png";
 ---
@@ -37,9 +38,13 @@ import helmet from "../images/helmet.png";
       </div>
     </div>
   </div> -->
-  <main class="pb-28 bg-secondaryBg text-white text-lg">
+  <main
+    transition:name="main"
+    transition:animate={slide({ duration: "0.4s" })}
+    class="text-white text-lg bg-secondaryBg"
+  >
     <div
-      class="flex mb-14 landscape:min-h-[calc(100vh-56px)] items-center gap-7 relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url(/dynamic_bg.png)] before:bg-right before:bg-no-repeat px-3 pt-32 pb-12 md:px-14 lg:px-32 before:bg-cover before:-z-10 z-10 before:opacity-60"
+      class="flex landscape:min-h-screen items-center gap-7 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/dynamic_bg.png)] after:bg-right after:bg-no-repeat px-3 pt-32 pb-12 md:px-14 lg:px-32 after:bg-cover after:-z-10 z-10 after:opacity-60"
     >
       <div class="grow">
         <h2 class="text-4xl text-goldColor mb-4">
@@ -69,7 +74,7 @@ import helmet from "../images/helmet.png";
     </div>
 
     <div
-      class="flex md:flex-row flex-col gap-6 justify-between px-3 md:px-14 lg:px-32"
+      class="flex md:flex-row flex-col gap-6 justify-between px-3 md:px-14 lg:px-32 py-12"
     >
       <div
         class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/miners.png')] bg-no-repeat bg-cover"

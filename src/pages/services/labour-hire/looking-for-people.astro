@@ -1,4 +1,5 @@
 ---
+import { slide } from "astro:transitions";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
@@ -6,7 +7,11 @@ import Layout from "../../../layouts/Layout.astro";
   title="Looking for people - Dynamic Total Services"
   content="Looking for people - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
 >
-  <main class="pb-10">
+  <main
+    transition:name="main"
+    transition:animate={slide({ duration: "0.4s" })}
+    class="pb-10"
+  >
     <header class="m-auto py-8 bg-secondaryBg pt-16">
       <h1 class="text-3xl font-bold mb-4 text-center text-white">
         Looking For People?

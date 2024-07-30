@@ -1,19 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { fade, slide, ViewTransitions } from "astro:transitions";
 ---
 
 <Layout
   title="About us - Dynamic Total Services"
   content="About us - Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
 >
-  <main>
+  <main transition:name="main" transition:animate={slide({ duration: "0.4s" })}>
     <header class="m-auto py-8 bg-secondaryBg pt-16">
       <h1 class="text-3xl font-bold mb-4 text-center text-white">About Us</h1>
     </header>
     <div
       class="py-9 px-3 md:px-14 lg:px-32 min-h-[80vh] flex flex-col justify-center"
     >
-      <div class="w-full border border-goldColor p-4 rounded-xl relative">
+      <div
+        class="w-full border border-goldColor p-4 rounded-xl relative space-y-2"
+      >
         <h3
           class="bg-primaryBg text-goldColor px-3 text-xs leading-7 font-bold md:text-xl absolute -top-4 left-1/4"
         >
@@ -24,13 +27,13 @@ import Layout from "../layouts/Layout.astro";
           one opportunity at a time, empowering individuals to embrace their
           greatest and shape their future. We take pride in being a labour hire
           company that specialises in providing highly skilled candidates to
-          work on mining sites across Western Australia. As a recruitment agency
-          for various organisations, we provide an external Human Resources
-          service to outsource candidates that meet the criteria for the
-          opportunity.
+          work on mining sites across Western Australia. As a labour hire
+          company for various organisations, we provide an external Human
+          Resources service to outsource candidates that meet the criteria for
+          the opportunity.
         </p>
         <p>
-          We are deeply committed in offering a distinctive combination of
+          We are deeply committed to offering a distinctive combination of
           specialised industry expertise, exceptional customer service, and a
           comprehensive candidate screening process. With a deep understanding
           of the mining and industrial sectors, we possess specialised industry
@@ -38,6 +41,17 @@ import Layout from "../layouts/Layout.astro";
           challenges of these industries. Our team of experienced professionals
           brings valuable insights and expertise, ensuring we can effectively
           match skilled workers to specific job roles and projects.
+        </p>
+        <p>
+          In addition to our labour hire services, Dynamic Total Services also
+          offers premium rubber lining services. Our new workshop in Bunbury is
+          equipped with state-of-the-art facilities and staffed by experienced
+          rubber liners who deliver top-quality workmanship. We provide a range
+          of rubber lining solutions designed to protect equipment, enhance
+          durability, and improve performance in harsh industrial environments.
+          Our rubber lining services complement our labour hire offerings,
+          providing a comprehensive solution to meet the diverse needs of our
+          clients in the mining and industrial sectors.
         </p>
       </div>
       <!-- <h3 class="text-goldColor text-xl">About Total Dynamic Services</h3>
@@ -64,10 +78,10 @@ import Layout from "../layouts/Layout.astro";
       <h3 class="text-xl font-semibold mt-2">Our Goal</h3>
       <p>
         At Dynamic Total Services, our mission is to be the leading provider of
-        skilled labour solutions in the mining, construction, and industrial
-        sectors. We are committed to delivering exceptional value to our clients
-        by supplying top-tier talent, fostering strong relationships, and
-        facilitating seamless workforce solutions.
+        skilled labour solutions and rubber lining services in the mining,
+        construction, and industrial sectors. We are committed to delivering
+        exceptional value to our clients by supplying top-tier talent, fostering
+        strong relationships, and facilitating seamless workforce solutions.
       </p>
       <h3 class="text-xl font-semibold mt-2">Our Values</h3>
       <p>
@@ -75,11 +89,13 @@ import Layout from "../layouts/Layout.astro";
         partnerships, talent empowerment, safety and compliance, and making a
         positive impact, Dynamic Total Services strives to be the preferred
         labour hire agency, delivering exceptional value to our clients,
-        candidates, and the industries we serve.
+        candidates, and the industries we serve. We specialize in providing
+        top-notch rubber lining services, ensuring high-quality craftsmanship
+        and reliability in every project.
       </p>
       <p>
         We foster a positive work culture built on respect, collaboration, and
-        teamwork. We prioritise open communication, value diverse perspectives,
+        teamwork. We prioritize open communication, value diverse perspectives,
         and promote a supportive environment where employees feel empowered and
         motivated. We celebrate achievements, encourage work-life balance, and
         promote employee well-being.
@@ -87,15 +103,18 @@ import Layout from "../layouts/Layout.astro";
       <h3 class="text-xl font-semibold mt-2">Our Mission</h3>
       <p>
         At Dynamic Total Services, our mission is to deliver unparalleled
-        recruitment solutions driven by a steadfast commitment to Safety,
-        Quality, and Excellence. We strive to provide a trusted partnership,
-        ensuring the highest standards of safety in every placement we make. Our
-        rigorous screening processes guarantee exceptional quality, matching
-        top-notch candidates to meet the unique demands of our clients. With an
-        unwavering pursuit of excellence, we aim to exceed expectations and
-        become the go-to recruitment agency in the industry. Together, let's
-        forge a future where Safety, Quality, and Excellence are the
-        cornerstones of success.
+        recruitment solutions and superior rubber lining services driven by a
+        steadfast commitment to Safety, Quality, and Excellence. We strive to
+        provide a trusted partnership, ensuring the highest standards of safety
+        in every placement we make and every project we undertake. Our rigorous
+        screening processes guarantee exceptional quality, matching top-notch
+        candidates to meet the unique demands of our clients. Additionally, our
+        expertise in rubber lining services ensures durability and efficiency in
+        every job, supported by our new state-of-the-art workshop in Bunbury.
+        With an unwavering pursuit of excellence, we aim to exceed expectations
+        and become the go-to recruitment agency and rubber lining service
+        provider in the industry. Together, let's forge a future where Safety,
+        Quality, and Excellence are the cornerstones of success.
       </p>
     </div>
   </main>

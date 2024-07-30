@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
+import { fade, slide, ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -49,8 +49,10 @@ const { title, content } = Astro.props;
   </head>
 
   <body class="bg-primaryBg text-primaryText">
+    <!-- transition:animate={slide({ duration: "0.2s" })} -->
     <header
       transition:persist
+      transition:name="header"
       id="head"
       class="bg-secondaryBg flex items-center justify-between px-3 text-sm py-2 h-14 md:px-14 lg:px-32 text-white fixed w-full z-50"
     >
@@ -73,9 +75,9 @@ const { title, content } = Astro.props;
       <!-- <img src="/dts.svg" class="h-6" alt="" /> -->
       <nav
         id="nav-bar"
-        class="flex gap-2 w-full left-0 absolute transition-transform z-50 flex-col py-8 px-2 top-11 md:w-auto md:static md:bg-transparent md:flex-row md:translate-x-0 md:py-0 bg-secondaryBg -translate-x-full"
+        class="flex gap-2 w-full left-0 absolute transition-transform z-50 flex-col py-8 px-2 md:px-14 top-11 lg:w-auto lg:static lg:bg-transparent lg:flex-row lg:translate-x-0 lg:py-0 bg-secondaryBg -translate-x-full"
       >
-        <details id="resources-menu" class="group relative">
+        <!-- <details id="resources-menu" class="group relative">
           <summary
             class="link flex cursor-pointer items-center gap-2 px-3 hover:font-medium"
           >
@@ -94,7 +96,7 @@ const { title, content } = Astro.props;
             >
           </summary>
           <menu
-            class="flex flex-col relative md:absolute bg-secondaryBg left-3 pb-2 translate-y-2 md:min-w-32 shadow-lg invisible rounded group-open:visible origin-top scale-95 group-open:scale-100 opacity-0 group-open:opacity-100 md:transition-all gap-3 md:top-6"
+            class="flex flex-col relative lg:absolute bg-secondaryBg left-3 pb-2 translate-y-2 lg:min-w-32 shadow-lg invisible rounded group-open:visible origin-top scale-95 group-open:scale-100 opacity-0 group-open:opacity-100 lg:transition-all gap-3 lg:top-6"
           >
             <li>
               <a
@@ -113,15 +115,35 @@ const { title, content } = Astro.props;
               </a>
             </li>
           </menu>
-        </details>
+        </details> -->
         <hr class="opacity-20" />
-        <a class="hover:underline" href="/about-us">
-          <p class="table px-3 w-full cursor-pointer">About Us</p>
+        <a
+          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
+          href="/services/rubber-lining/"
+        >
+          Rubber Lining Services
+        </a>
+        <hr class="opacity-20" />
+        <a
+          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
+          href="/services/labour-hire/"
+        >
+          Labour Hire Services
+        </a>
+        <hr class="opacity-20" />
+        <a
+          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
+          href="/about-us"
+        >
+          About Us
         </a>
         <hr class="opacity-20" />
 
-        <a class="hover:underline" href="/contact-us">
-          <p class="table px-3 w-full cursor-pointer">Contact Us</p>
+        <a
+          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
+          href="/contact-us"
+        >
+          Contact Us
         </a>
       </nav>
       <span class="flex gap-3">
@@ -145,7 +167,7 @@ const { title, content } = Astro.props;
           tabindex="0"
           id="menu-icon"
           aria-expanded="false"
-          class="group border border-white h-8 px-2 m-auto relative bg-transparent shadow-md md:hidden rounded-lg"
+          class="group border border-white h-8 px-2 m-auto relative bg-transparent shadow-md lg:hidden rounded-lg"
         >
           <span
             id="menu-shape"
@@ -155,8 +177,13 @@ const { title, content } = Astro.props;
         </button>
       </span>
     </header>
-    <slot />
+    <slot
+      transition:animate={slide({ duration: "0.4s" })}
+      transition:name="main"
+    />
     <footer
+      transition:name="footer"
+      transition:persist
       class="text-center flex gap-4 flex-col bg-secondaryBg text-white text-sm font-extralight py-9 px-3 md:px-14 lg:px-32"
     >
       <div class="flex gap-4 flex-col md:flex-row md:justify-between">
@@ -170,7 +197,8 @@ const { title, content } = Astro.props;
           <p class="text-goldColor text-[10px] md:text-xs">
             SAFETY QUALITY EXCELLENCE
           </p>
-          <p><span class="font-medium">ABN:</span>75669511737</p>
+          <p><span class="font-medium mr-1">ACN:</span>669511737</p>
+          <p><span class="font-medium mr-1">ABN:</span>75669511737</p>
         </span>
         <span class="md:text-left">
           <h5 class="text-base font-semibold">DTS</h5>
@@ -227,7 +255,7 @@ const { title, content } = Astro.props;
           >
         </span>
       </div>
-      <p>2022 &copy; DYNAMIC TOTAL SERVICES, Inc. All Rights Reserved.</p>
+      <p>2024 &copy; DYNAMIC TOTAL SERVICES, Inc. All Rights Reserved.</p>
     </footer>
     <script is:inline>
       let ham = false;
@@ -239,7 +267,7 @@ const { title, content } = Astro.props;
       const moonIcon = document.getElementById("moon-icon");
       const navBar = document.getElementById("nav-bar");
       const menuShape = document.getElementById("menu-shape");
-      const detailsToggle = document.getElementById("resources-menu");
+      // const detailsToggle = document.getElementById("resources-menu");
       const menu = document.querySelector("menu");
 
       const menuClassLists = [
@@ -308,7 +336,7 @@ const { title, content } = Astro.props;
           document.documentElement.setAttribute("data-color-mode", "light");
         }
         closeMenu();
-        detailsToggle.removeAttribute("open");
+        // detailsToggle.removeAttribute("open");
       }
       colorMode();
 
@@ -325,15 +353,16 @@ const { title, content } = Astro.props;
       themeButton.addEventListener("click", toggleTheme);
       // document.documentElement.setAttribute("style", '"visibility: visible"');
       document.addEventListener("click", function (e) {
-        if (!detailsToggle?.contains(e.target)) {
-          detailsToggle.removeAttribute("open");
-        }
+        // if (!detailsToggle?.contains(e.target)) {
+        //   detailsToggle.removeAttribute("open");
+        // }
         if (
           !e.target?.matches("#menu-icon") &&
-          !menu?.contains(e.target) &&
-          !detailsToggle?.contains(e.target) &&
-          !e.target?.matches("#detailsToggle")
+          !menu?.contains(e.target)
+          //  && !detailsToggle?.contains(e.target) &&
+          // !e.target?.matches("#detailsToggle")
         ) {
+          closeMenu();
         }
       });
     </script>
