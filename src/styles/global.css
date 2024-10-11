@@ -17,7 +17,7 @@
     --primary-bg-color: #fff;
     --secondary-bg-color: #00043c;
     --gold-color: #e2b355;
-    --primary-text-color: #000;
+    --primary-text-color: 0 0% 0%;
     --secondary-bg-color-2: #ebedf7;
     --primary-cta-color: #00043c;
   }
@@ -25,10 +25,17 @@
     --primary-bg-color: #121212;
     --secondary-bg-color: #1c1c1c;
     --gold-color: #e2b355;
-    --primary-text-color: #fff;
+    --primary-text-color: 0 0% 100%;
     --secondary-bg-color-2: #1c1c1c;
     --primary-cta-color: #babef6;
   }
+}
+
+.icons-Shadow:hover {
+  box-shadow: 0 0 15px #3b5998;
+}
+.icons-Shadow-ins:hover {
+  box-shadow: 0 0 15px #bc2a8d;
 }
 
 .gar {

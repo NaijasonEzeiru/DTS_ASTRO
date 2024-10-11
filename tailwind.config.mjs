@@ -7,7 +7,7 @@ export default {
         primaryBg: "var(--primary-bg-color)",
         secondaryBg: "var(--secondary-bg-color)",
         goldColor: "var(--gold-color)",
-        primaryText: "var(--primary-text-color)",
+        primaryText: "hsl(var(--primary-text-color))",
         secondaryBg2: "var(--secondary-bg-color-2)",
         primaryCta: "var(--primary-cta-color)",
         // disabledColor: 'var(--disabled-gold-color)'
