@@ -1,262 +1,100 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>Dynamic Total Services</title>
-    <meta name="astro-view-transitions-enabled" content="true" />
-    <meta name="astro-view-transitions-fallback" content="animate" />
-    <meta
-      name="description"
-      content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
-    />
-    <!-- Facebook Meta Tags -->
-    <meta
-      property="og:url"
-      content="https://www.dynamictotalservices.com.au/"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dynamic Total Services" />
-    <meta
-      property="og:description"
-      content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
-    />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dddjzeutf/image/upload/v1692365778/og-image_gh8bz7.png"
-    />
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="dynamictotalservices.com.au" />
-    <meta
-      property="twitter:url"
-      content="https://www.dynamictotalservices.com.au/"
-    />
-    <meta name="twitter:title" content="Dynamic Total Services" />
-    <meta
-      name="twitter:description"
-      content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."
-    />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/dddjzeutf/image/upload/v1692365778/og-image_gh8bz7.png"
-    />
-    <link rel="stylesheet" href="/_astro/FAQS.B63-8NT7.css" />
-    <script type="module" src="/_astro/hoisted.Oozc_hRb.js"></script>
-    <style>
-      [data-astro-transition-scope="astro-benpfmuv-1"] {
-        view-transition-name: main;
-      }
-      @layer astro {
-        ::view-transition-old(main) {
-          animation-duration: 0.4s, 0.4s;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1),
-            cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both, both;
-          animation-name: astroFadeOut, astroSlideToLeft;
-        }
-        ::view-transition-new(main) {
-          animation-duration: 0.4s, 0.4s;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1),
-            cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both, both;
-          animation-name: astroFadeIn, astroSlideFromRight;
-        }
-        [data-astro-transition="back"]::view-transition-old(main) {
-          animation-name: astroFadeOut, astroSlideToRight;
-        }
-        [data-astro-transition="back"]::view-transition-new(main) {
-          animation-name: astroFadeIn, astroSlideFromLeft;
-        }
-      }
-      [data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-benpfmuv-1"],
-      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-benpfmuv-1"] {
-        animation-duration: 0.4s, 0.4s;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1),
-          cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both, both;
-        animation-name: astroFadeOut, astroSlideToLeft;
-      }
-      [data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-benpfmuv-1"],
-      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-benpfmuv-1"] {
-        animation-duration: 0.4s, 0.4s;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1),
-          cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both, both;
-        animation-name: astroFadeIn, astroSlideFromRight;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-benpfmuv-1"],
-      [data-astro-transition="back"][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-benpfmuv-1"] {
-        animation-name: astroFadeOut, astroSlideToRight;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-benpfmuv-1"],
-      [data-astro-transition="back"][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-benpfmuv-1"] {
-        animation-name: astroFadeIn, astroSlideFromLeft;
-      }
-    </style>
-    <style>
-      [data-astro-transition-scope="astro-opc6ygpf-2"] {
-        view-transition-name: header;
-      }
-      @layer astro {
-        ::view-transition-old(header) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeOut;
-        }
-        ::view-transition-new(header) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeIn;
-        }
-        [data-astro-transition="back"]::view-transition-old(header) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeOut;
-        }
-        [data-astro-transition="back"]::view-transition-new(header) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeIn;
-        }
-      }
-      [data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-opc6ygpf-2"],
-      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-opc6ygpf-2"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeOut;
-      }
-      [data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-opc6ygpf-2"],
-      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-opc6ygpf-2"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeIn;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-opc6ygpf-2"],
-      [data-astro-transition="back"][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-opc6ygpf-2"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeOut;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-opc6ygpf-2"],
-      [data-astro-transition="back"][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-opc6ygpf-2"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeIn;
-      }
-    </style>
-    <style>
-      [data-astro-transition-scope="astro-h3d5u7ce-3"] {
-        view-transition-name: footer;
-      }
-      @layer astro {
-        ::view-transition-old(footer) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeOut;
-        }
-        ::view-transition-new(footer) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeIn;
-        }
-        [data-astro-transition="back"]::view-transition-old(footer) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeOut;
-        }
-        [data-astro-transition="back"]::view-transition-new(footer) {
-          animation-duration: 180ms;
-          animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-          animation-fill-mode: both;
-          animation-name: astroFadeIn;
-        }
-      }
-      [data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-h3d5u7ce-3"],
-      [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-h3d5u7ce-3"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeOut;
-      }
-      [data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-h3d5u7ce-3"],
-      [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-h3d5u7ce-3"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeIn;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="old"]
-        [data-astro-transition-scope="astro-h3d5u7ce-3"],
-      [data-astro-transition="back"][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-h3d5u7ce-3"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeOut;
-      }
-      [data-astro-transition="back"][data-astro-transition-fallback="new"]
-        [data-astro-transition-scope="astro-h3d5u7ce-3"],
-      [data-astro-transition="back"][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-h3d5u7ce-3"] {
-        animation-duration: 180ms;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-fill-mode: both;
-        animation-name: astroFadeIn;
-      }
-    </style>
-  </head>
-  <body class="bg-primaryBg text-primaryText">
-    <!-- transition:animate={slide({ duration: "0.2s" })} -->
-    <header
-      data-astro-transition-persist="header"
-      id="head"
-      class="bg-secondaryBg flex items-center justify-between px-3 text-sm py-2 h-14 md:px-14 lg:px-32 text-white fixed w-full z-50"
-      data-astro-transition-scope="astro-opc6ygpf-2"
-    >
-      <a
-        class="hover:opacity-80"
-        href="/"
-        aria-label="home page link"
-        class="focus-visible:outline focus-visible:outline-1 focus-visible:outline-orange-400 text-base"
-      >
-        <span class="flex gap-2 items-center">
-          <img class="h-11 w-11" src="/icon.svg" alt="navigate to home page" />
-          <span
-            class="flex flex-col justify-between text-[0.5rem] leading-3 uppercase"
-          >
-            <p class="text-xs font-semibold">Dynamic Total Services</p>
-            <p class="text-goldColor">safety QUALITY EXCELLENCE</p>
-          </span>
-        </span>
-      </a>
-      <!-- <img src="/dts.svg" class="h-6" alt="" /> -->
-      <nav
-        id="nav-bar"
-        class="flex gap-2 w-full left-0 absolute transition-transform z-50 flex-col py-8 px-2 md:px-14 top-11 lg:w-auto lg:static lg:bg-transparent lg:flex-row lg:translate-x-0 lg:py-0 bg-secondaryBg -translate-x-full"
-      >
-        <!-- <details id="resources-menu" class="group relative">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="icon.svg"><link rel="sitemap" href="/sitemap-index.xml"><title>Dynamic Total Services</title><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><meta name="description" content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."><!-- Facebook Meta Tags --><meta property="og:url" content="https://www.dynamictotalservices.com.au/"><meta property="og:type" content="website"><meta property="og:title" content="Dynamic Total Services"><meta property="og:description" content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."><meta property="og:image" content="https://res.cloudinary.com/dddjzeutf/image/upload/v1692365778/og-image_gh8bz7.png"><!-- Twitter Meta Tags --><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="dynamictotalservices.com.au"><meta property="twitter:url" content="https://www.dynamictotalservices.com.au/"><meta name="twitter:title" content="Dynamic Total Services"><meta name="twitter:description" content="The landing page of Dynamic Total Services. - We understand the dynamic nature of the mining industry. With our flexible workforce management, you can easily adjust your staffing levels based on project demands, seasonal variations, or unforeseen events. We provide you with the agility to optimise productivity while minimising overhead costs."><meta name="twitter:image" content="https://res.cloudinary.com/dddjzeutf/image/upload/v1692365778/og-image_gh8bz7.png"><link rel="stylesheet" href="/_astro/FAQS.C9Qu_jDs.css"><script type="module" src="/_astro/hoisted.Oozc_hRb.js"></script><style>[data-astro-transition-scope="astro-benpfmuv-1"] { view-transition-name: main; }@layer astro { ::view-transition-old(main) { 
+	animation-duration: 0.4s, 0.4s;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }::view-transition-new(main) { 
+	animation-duration: 0.4s, 0.4s;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back]::view-transition-old(main) { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back]::view-transition-new(main) { 
+	animation-name: astroFadeIn, astroSlideFromLeft; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-benpfmuv-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-benpfmuv-1"] { 
+	animation-duration: 0.4s, 0.4s;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-benpfmuv-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-benpfmuv-1"] { 
+	animation-duration: 0.4s, 0.4s;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-benpfmuv-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-benpfmuv-1"] { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-benpfmuv-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-benpfmuv-1"] { 
+	animation-name: astroFadeIn, astroSlideFromLeft; }</style><style>[data-astro-transition-scope="astro-opc6ygpf-2"] { view-transition-name: header; }@layer astro { ::view-transition-old(header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-opc6ygpf-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-opc6ygpf-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-opc6ygpf-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-opc6ygpf-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-opc6ygpf-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-opc6ygpf-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-opc6ygpf-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-opc6ygpf-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-h3d5u7ce-3"] { view-transition-name: footer; }@layer astro { ::view-transition-old(footer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(footer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(footer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(footer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-h3d5u7ce-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-h3d5u7ce-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-h3d5u7ce-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-h3d5u7ce-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-h3d5u7ce-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-h3d5u7ce-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-h3d5u7ce-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-h3d5u7ce-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="bg-primaryBg text-primaryText"> <!-- transition:animate={slide({ duration: "0.2s" })} --> <header data-astro-transition-persist="header" id="head" class="bg-secondaryBg flex items-center justify-between px-3 text-sm py-2 h-14 md:px-14 lg:px-32 text-white fixed w-full z-50" data-astro-transition-scope="astro-opc6ygpf-2"> <a class="hover:opacity-80" href="/" aria-label="home page link" class="focus-visible:outline focus-visible:outline-1 focus-visible:outline-orange-400 text-base"> <span class="flex gap-2 items-center"> <img class="h-11 w-11" src="/icon.svg" alt="navigate to home page"> <span class="flex flex-col justify-between text-[0.5rem] leading-3 uppercase"> <p class="text-xs font-semibold">Dynamic Total Services</p> <p class="text-goldColor">safety QUALITY EXCELLENCE</p> </span> </span> </a> <!-- <img src="/dts.svg" class="h-6" alt="" /> --> <nav id="nav-bar" class="flex gap-2 w-full left-0 absolute transition-transform z-50 flex-col py-8 px-2 md:px-14 top-11 lg:w-auto lg:static lg:bg-transparent lg:flex-row lg:translate-x-0 lg:py-0 bg-secondaryBg -translate-x-full"> <!-- <details id="resources-menu" class="group relative">
           <summary
             class="link flex cursor-pointer items-center gap-2 px-3 hover:font-medium"
           >
@@ -294,293 +132,59 @@
               </a>
             </li>
           </menu>
-        </details> -->
-        <hr class="opacity-20" />
-        <a
-          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
-          href="/services/rubber-lining/"
-        >
-          Rubber Lining Services
-        </a>
-        <hr class="opacity-20" />
-        <a
-          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
-          href="/services/labour-hire/"
-        >
-          Labour Hire Services
-        </a>
-        <hr class="opacity-20" />
-        <a
-          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
-          href="/about-us"
-        >
-          About Us
-        </a>
-        <hr class="opacity-20" />
-        <a
-          class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full"
-          href="/contact-us"
-        >
-          Contact Us
-        </a>
-      </nav>
-      <span class="flex gap-3">
-        <button aria-label="dark mode theme toggle" id="theme-button">
-          <span id="sun-icon" class="block">
-            <img
-              src="/sun.svg"
-              alt="switch to light mode"
-              class="block h-8 w-8 opacity-80 hover:opacity-100"
-            />
-          </span>
-          <span id="moon-icon" class="hidden">
-            <img
-              src="/moon.svg"
-              alt="switch to dark mode"
-              class="h-8 w-8 opacity-70 hover:opacity-100"
-            />
-          </span>
-        </button>
-        <button
-          tabindex="0"
-          id="menu-icon"
-          aria-expanded="false"
-          class="group border border-white h-8 px-2 m-auto relative bg-transparent shadow-md lg:hidden rounded-lg"
-        >
-          <span
-            id="menu-shape"
-            class="relative h-[2px] block w-5 bg-white before:absolute before:top-[-6px] before:left-0 before:h-[2px] before:w-full before:bg-white before:content-[&quot;&quot;] before:transition-transform after:absolute after:top-[6px] after:left-0 after:h-[2px] after:w-full after:bg-white after:content-[&quot;&quot;] after:transition-transform"
-          ></span>
-        </button>
-      </span>
-    </header>
-    <main
-      class="text-white text-lg bg-secondaryBg"
-      data-astro-transition-scope="astro-benpfmuv-1"
-    >
-      <div
-        class="flex landscape:min-h-screen items-center gap-7 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/dynamic_bg.png)] after:bg-right after:bg-no-repeat px-3 pt-32 pb-12 md:px-14 lg:px-32 after:bg-cover after:-z-10 z-10 after:opacity-60"
-      >
-        <div class="grow">
-          <h2 class="text-4xl text-goldColor mb-4">
-            Welcome to Dynamic Total Services
-          </h2>
-          <p class="border-2 border-[#e2b355c4] rounded-xl p-5">
-            Dynamic Total Services is your go-to partner for
-            <span class="text-goldColor uppercase">top-quality</span> rubber
-            lining services and
-            <span class="text-goldColor uppercase"
-              >expert employment solutions</span
-            >
-            in the mining sector. Whether you’re looking to protect your
-            equipment with durable rubber linings or seeking to connect with the
-            <span class="text-goldColor uppercase">
-              best talent in the mining industry </span
-            >, we’ve got you covered.
-          </p>
-        </div>
-        <!-- <Image
+        </details> --> <hr class="opacity-20"> <a class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full" href="/services/rubber-lining/">
+Rubber Lining Services
+</a> <hr class="opacity-20"> <a class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full" href="/services/labour-hire/">
+Labour Hire Services
+</a> <hr class="opacity-20"> <a class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full" href="/about-us">
+About Us
+</a> <hr class="opacity-20"> <a class="hover:underline active:text-goldColor table px-2 whitespace-nowrap w-full" href="/contact-us">
+Contact Us
+</a> </nav> <span class="flex gap-3"> <button aria-label="dark mode theme toggle" id="theme-button"> <span id="sun-icon" class="block"> <img src="/sun.svg" alt="switch to light mode" class="block h-8 w-8 opacity-80 hover:opacity-100"> </span> <span id="moon-icon" class="hidden"> <img src="/moon.svg" alt="switch to dark mode" class="h-8 w-8 opacity-70 hover:opacity-100"> </span> </button> <button tabindex="0" id="menu-icon" aria-expanded="false" class="group border border-white h-8 px-2 m-auto relative bg-transparent shadow-md lg:hidden rounded-lg"> <span id="menu-shape" class="relative h-[2px] block w-5 bg-white before:absolute before:top-[-6px] before:left-0 before:h-[2px] before:w-full before:bg-white before:content-[&quot;&quot;] before:transition-transform after:absolute after:top-[6px] after:left-0 after:h-[2px] after:w-full after:bg-white after:content-[&quot;&quot;] after:transition-transform"></span> </button> </span> </header>   <main class="text-white text-lg bg-secondaryBg" data-astro-transition-scope="astro-benpfmuv-1"> <div class="flex landscape:min-h-screen items-center gap-7 relative after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url(/dynamic_bg.png)] after:bg-right after:bg-no-repeat px-3 pt-32 pb-12 md:px-14 lg:px-32 after:bg-cover after:-z-10 z-10 after:opacity-60"> <div class="grow"> <h2 class="text-4xl text-goldColor mb-4">
+Welcome to Dynamic Total Services
+</h2> <p class="border-2 border-[#e2b355c4] rounded-xl p-5">
+Dynamic Total Services is your go-to partner for <span class="text-goldColor uppercase">top-quality</span> rubber lining services and <span class="text-goldColor uppercase">expert employment solutions</span> in the mining sector. Whether you’re looking to protect your
+          equipment with durable rubber linings or seeking to connect with the <span class="text-goldColor uppercase">
+best talent in the mining industry
+</span>, we’ve got you covered.
+</p> </div> <!-- <Image
         src={helmet}
         alt="safety helmet"
         class="hidden lg:block grow"
         width="420"
         height="365"
-      /> -->
-        <img
-          src="/helmet.png"
-          alt="safety helmet"
-          class="hidden lg:block grow"
-        />
-      </div>
-      <div
-        class="flex md:flex-row flex-col gap-6 justify-between px-3 md:px-14 lg:px-32 py-12"
-      >
-        <div
-          class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/miners.png')] bg-no-repeat bg-cover"
-        >
-          <div
-            class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"
-          >
-            <p class="text-justify">
-              In the dynamic world of mining, finding the right job or the
-              perfect candidate can be challenging. Dynamic Total Services
-              bridges this gap by providing comprehensive employment solutions
-              tailored to the mining sector.
-            </p>
-            <a
-              href="/services/labour-hire"
-              class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]"
-            >
-              Labour Hire
-            </a>
-          </div>
-        </div>
-        <div
-          class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/rubber-lining-home.png')] bg-no-repeat bg-contain"
-        >
-          <div
-            class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"
-          >
-            <p class="text-justify">
-              Protecting your equipment from wear and tear is essential for
-              maintaining productivity. At Dynamic Total Services, we specialize
-              in providing top-tier rubber lining services to extend the
-              lifespan of your machinery.
-            </p>
-            <a
-              href="/services/rubber-lining"
-              class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]"
-            >
-              Rubber Lining
-            </a>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer
-      data-astro-transition-persist="footer"
-      class="text-center flex gap-4 flex-col bg-secondaryBg text-white text-sm font-extralight py-9 px-3 md:px-14 lg:px-32"
-      data-astro-transition-scope="astro-h3d5u7ce-3"
-    >
-      <div class="flex gap-4 flex-col md:flex-row md:justify-between">
-        <span class="flex flex-col items-center">
-          <img
-            src="/icon.svg"
-            alt="Logo of dynamic total services"
-            class="w-12 h-12 md:w-9 md:h-9 mb-1 md:self-center"
-          />
-          <p class="font-semibold md:text-base">DYNAMIC TOTAL SERVICES</p>
-          <p class="text-goldColor text-[10px] md:text-xs">
-            SAFETY QUALITY EXCELLENCE
-          </p>
-          <p><span class="font-medium mr-1">ACN:</span>669511737</p>
-          <p><span class="font-medium mr-1">ABN:</span>75669511737</p>
-        </span>
-        <span class="md:text-left">
-          <h5 class="text-base font-semibold">DTS</h5>
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/services/labour-hire"
-          >
-            Labour Hire
-          </a>
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/services/rubber-lining"
-          >
-            Rubber Lining
-          </a>
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/services/labour-hire/looking-for-people"
-          >
-            Looking for People
-          </a>
-          <a
-            class="hover:underline"
-            href="/services/labour-hire/looking-for-job"
-          >
-            Looking for Work
-          </a>
-        </span>
-        <span class="md:text-left">
-          <h5 class="text-base font-semibold">ABOUT US</h5>
-          <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/FAQS">
+      /> --> <img src="/helmet.png" alt="safety helmet" class="hidden lg:block grow"> </div> <div class="flex md:flex-row flex-col gap-6 justify-between px-3 md:px-14 lg:px-32 py-12"> <div class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/miners.png')] bg-no-repeat bg-cover"> <div class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"> <p class="text-justify">
+In the dynamic world of mining, finding the right job or the perfect
+            candidate can be challenging. Dynamic Total Services bridges this
+            gap by providing comprehensive employment solutions tailored to the
+            mining sector.
+</p> <a href="/services/labour-hire" class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]">
+Labour Hire
+</a> </div> </div> <div class="border-4 border-[#e2b355c4] w-full h-[500px] relative bg-[url('/lining.jpg')] bg-no-repeat bg-cover"> <div class="px-6 py-4 flex flex-col gap-7 bottom-0 bg-[#e2b355c4] w-full text-black absolute justify-between"> <p class="text-justify">
+Protecting your equipment from wear and tear is essential for
+            maintaining productivity. At Dynamic Total Services, we specialize
+            in providing top-tier rubber lining services to extend the lifespan
+            of your machinery.
+</p> <a href="/services/rubber-lining" class="border rounded py-1.5 px-2 w-fit border-secondaryBg mx-auto shadow hover:bg-secondaryBg hover:text-white bg-[#e2b355]">
+Rubber Lining
+</a> </div> </div> </div> </main>  <footer data-astro-transition-persist="footer" class="text-center flex gap-4 flex-col bg-secondaryBg text-white text-sm font-extralight py-9 px-3 md:px-14 lg:px-32" data-astro-transition-scope="astro-h3d5u7ce-3"> <div class="flex gap-4 flex-col md:flex-row md:justify-between"> <span class="flex flex-col items-center"> <img src="/icon.svg" alt="Logo of dynamic total services" class="w-12 h-12 md:w-9 md:h-9 mb-1 md:self-center"> <p class="font-semibold md:text-base">DYNAMIC TOTAL SERVICES</p> <p class="text-goldColor text-[10px] md:text-xs">
+SAFETY QUALITY EXCELLENCE
+</p> <p><span class="font-medium mr-1">ACN:</span>669511737</p> <p><span class="font-medium mr-1">ABN:</span>75669511737</p> </span> <span class="md:text-left"> <h5 class="text-base font-semibold">DTS</h5> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/services/labour-hire">
+Labour Hire
+</a> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/services/rubber-lining">
+Rubber Lining
+</a> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/services/labour-hire/looking-for-people">
+Looking for People
+</a> <a class="hover:underline" href="/services/labour-hire/looking-for-job">
+Looking for Work
+</a> </span> <span class="md:text-left"> <h5 class="text-base font-semibold">ABOUT US</h5> <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/FAQS">
             FAQs
-          </a> -->
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/about-us"
-          >
-            About Us</a
-          >
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/contact-us"
-          >
-            Contact Us</a
-          >
-          <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/terms-and-conditions">
+          </a> --> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/about-us">
+About Us</a> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/contact-us">
+Contact Us</a> <!-- <a class="hover:underline block w-fit mx-auto md:mx-0" href="/terms-and-conditions">
             Terms & Conditions
-          </a> -->
-          <a
-            class="hover:underline block w-fit mx-auto md:mx-0"
-            href="/sitemap-0.xml"
-          >
-            Sitemap</a
-          >
-        </span>
-      </div>
-      <span class="flex gap-4 mx-auto">
-        <a
-          href="https://www.facebook.com/dynamictotalservices?mibextid=LQQJ4d"
-          target="_blank"
-          class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#3b5998] icons-Shadow"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-facebook text-white transition-all hover:text-[#3b5998] size-4"
-            aria-hidden="true"
-          >
-            <path
-              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-            ></path></svg
-        ></a>
-        <a
-          href="https://au.linkedin.com/company/dynamictotalservicesptyltd"
-          target="_blank"
-          class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#0077B5] icons-Shadow"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-linkedin text-white transition-all hover:text-[#0077B5] size-4"
-          >
-            <path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-            ></path>
-            <rect width="4" height="12" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle></svg
-        ></a>
-        <a
-          href="https://www.instagram.com/dynamictotalservices?igsh=cW1tMDN2M3ZoZW9t"
-          target="_blank"
-          class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#bc2a8d] icons-Shadow-ins"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-instagram text-white transition-all hover:text-[#bc2a8d] size-4"
-          >
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg
-        ></a>
-      </span>
-      <p>2024 &copy; DYNAMIC TOTAL SERVICES, Inc. All Rights Reserved.</p>
-    </footer>
-    <script>
+          </a> --> <a class="hover:underline block w-fit mx-auto md:mx-0" href="/sitemap-0.xml">
+Sitemap</a> </span> </div> <span class="flex gap-4 mx-auto"> <a href="https://www.facebook.com/dynamictotalservices?mibextid=LQQJ4d" target="_blank" class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#3b5998] icons-Shadow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook text-white transition-all hover:text-[#3b5998] size-4" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a> <a href="https://au.linkedin.com/company/dynamictotalservicesptyltd" target="_blank" class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#0077B5] icons-Shadow"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin text-white transition-all hover:text-[#0077B5] size-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://www.instagram.com/dynamictotalservices?igsh=cW1tMDN2M3ZoZW9t" target="_blank" class="size-7 flex items-center justify-center rounded-full border-2 border-whitext-white float-left transition-all hover:border-2 hover:border-[#bc2a8d] icons-Shadow-ins"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram text-white transition-all hover:text-[#bc2a8d] size-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a> </span> <p>2024 &copy; DYNAMIC TOTAL SERVICES, Inc. All Rights Reserved.</p> </footer> <script>
       let ham = false;
 
       const matcher = window.matchMedia("(prefers-color-scheme: dark)");
@@ -688,6 +292,4 @@
           closeMenu();
         }
       });
-    </script>
-  </body>
-</html>
+    </script> </body> </html>

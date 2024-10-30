@@ -11,7 +11,7 @@
             <link rel="icon" type="image/svg+xml" href="icon.svg" />
                 <title>Sitemap - Dynamic Total Services</title>
                 <!-- <link rel="stylesheet" href="/_astro/FAQS.DCTKlWwZ.css" /> -->
-                <link rel="stylesheet" href="/_astro/FAQS.B63-8NT7.css" />
+                <link rel="stylesheet" href="/_astro/FAQS.C9Qu_jDs.css" />
             </head>
             <body class="py-9 px-3 flex md:px-14 lg:px-32">
                 <div class="w-full">
