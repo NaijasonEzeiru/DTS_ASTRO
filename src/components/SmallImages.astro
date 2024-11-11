@@ -1,0 +1,18 @@
+---
+interface Props {
+  v: string;
+  i: number;
+}
+
+const { v, i } = Astro.props;
+---
+
+<div class="relative cursor-pointer md:pr-4">
+  <img
+    alt={`view image ${i + 1}`}
+    src={v}
+    width={80}
+    height={65}
+    class="w-20 md:w-full rounded-md aspect-4/3 max-w-none block object-cover"
+  />
+</div>
