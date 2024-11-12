@@ -1,6 +1,10 @@
 ---
 import { slide } from "astro:transitions";
 import Layout from "../../../layouts/Layout.astro";
+import refurbishment from "../../../images/REFURBISHMENT.jpg";
+import worker from "../../../images/worker.png";
+import mineSiteReclaimer from "../../../images/mine-site-reclaimer.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -24,8 +28,8 @@ import Layout from "../../../layouts/Layout.astro";
     <section class="py-9 px-3 md:px-14 lg:px-32 flex flex-col gap-3 mb-10">
       <div class="flex flex-col lg:flex-row items-center gap-3">
         <div class="shrink basis-0 grow w-full">
-          <img
-            src="../../../mine-site-reclaimer.jpg"
+          <Image
+            src={mineSiteReclaimer}
             alt="mine site reclaimer"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-lg"
           />
@@ -197,8 +201,8 @@ import Layout from "../../../layouts/Layout.astro";
     <section class="px-3 md:px-14 lg:px-32 flex flex-col sm:flex-row gap-3">
       <div class="text-center grow shrink basis-0 bg-secondaryBg2 rounded-xl">
         <div>
-          <img
-            src="../../../worker.png"
+          <Image
+            src={worker}
             alt="a happy worker ready to work"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-t-xl"
           />
@@ -220,8 +224,8 @@ import Layout from "../../../layouts/Layout.astro";
       </div>
       <div class="text-center grow shrink basis-0 bg-secondaryBg2 rounded-xl">
         <div>
-          <img
-            src="../../../REFURBISHMENT.jpg"
+          <Image
+            src={refurbishment}
             alt="mine site stacker"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-t-xl"
           />

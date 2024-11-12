@@ -1,7 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import { slide } from "astro:transitions";
 import "swiper/css";
 import Layout from "../../../layouts/Layout.astro";
+import reducingSpools from "../../../images/REDUCING SPOOLS.jpg";
+import tankLining from "../../../images/TANK LINING.jpg";
+import lining1 from "../../../images/lining-1.jpg";
+import lining2 from "../../../images/lining-2.jpg";
+import lining3 from "../../../images/lining-3.jpg";
+import lining4 from "../../../images/lining-4.jpg";
+import lining5 from "../../../images/lining-5.jpg";
+import lining6 from "../../../images/lining-6.jpg";
+import lining7 from "../../../images/lining-7.jpg";
+import lining8 from "../../../images/lining-8.jpg";
+import lining9 from "../../../images/lining-9.jpg";
+import lining10 from "../../../images/lining-10.jpg";
+import lining11 from "../../../images/lining-11.jpg";
 ---
 
 <Layout
@@ -26,8 +40,8 @@ import Layout from "../../../layouts/Layout.astro";
       </p>
       <div class="flex flex-col lg:flex-row items-center gap-3 mt-5">
         <div class="shrink basis-0 grow w-full">
-          <img
-            src="/TANK LINING.jpg"
+          <Image
+            src={tankLining}
             alt="rubber lined pipes"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-lg"
           />
@@ -56,8 +70,8 @@ import Layout from "../../../layouts/Layout.astro";
       </div>
       <div class="flex flex-col lg:flex-row-reverse items-center gap-3">
         <div class="shrink basis-0 grow w-full">
-          <img
-            src="/REDUCING SPOOLS.jpg"
+          <Image
+            src={reducingSpools}
             alt="rubber lining workshop"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-lg"
           />
@@ -86,11 +100,16 @@ import Layout from "../../../layouts/Layout.astro";
       </div>
       <div class="flex flex-col lg:flex-row items-center gap-3">
         <div class="shrink basis-0 grow w-full">
-          <img
-            src="/lining-11.jpg"
+          <Image
+            src={lining11}
             alt="rubber linning inspection"
             class="brightness-[.7] w-full aspect-3/2 object-cover rounded-lg"
           />
+          <!-- <img
+            src="/lining-11.jpg"
+            alt="rubber linning inspection"
+            class="brightness-[.7] w-full aspect-3/2 object-cover rounded-lg"
+          /> -->
         </div>
         <div class="py-1 flex flex-col gap-2 shrink basis-0 grow">
           <h4 class="font-bold text-2xl text-goldColor">Inspection Services</h4>
@@ -183,9 +202,21 @@ import Layout from "../../../layouts/Layout.astro";
         <div class="swiper">
           <div class="swiper-wrapper">
             {
-              [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+              [
+                lining1,
+                lining2,
+                lining3,
+                lining4,
+                lining5,
+                lining6,
+                lining7,
+                lining8,
+                lining9,
+                lining10,
+                lining11,
+              ].map((v, i) => (
                 <div class="swiper-slide">
-                  <img src={`/lining-${i + 1}.jpg`} alt="" />
+                  <Image src={v} alt={`image ${1 + i}`} />
                   <p>Picture {1 + i}</p>
                 </div>
               ))
@@ -202,28 +233,28 @@ import Layout from "../../../layouts/Layout.astro";
   import Swiper from "swiper";
 
   // Wait for DOMContentLoaded event
-  document.addEventListener("DOMContentLoaded", () => {
-    // Initialize thumbs swiper
-    var swiper = new Swiper(".swiper", {
-      grabCursor: true,
-      initialSlide: 4,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      speed: 1000,
-      freeMode: false,
-      mousewheel: {
-        thresholdDelta: 30,
+  // document.addEventListener("DOMContentLoaded", () => {
+  // Initialize thumbs swiper
+  var swiper = new Swiper(".swiper", {
+    grabCursor: true,
+    initialSlide: 4,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    speed: 1000,
+    freeMode: false,
+    mousewheel: {
+      thresholdDelta: 30,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    on: {
+      click() {
+        // @ts-expect-error
+        swiper.slideTo(this.clickedIndex);
       },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      on: {
-        click() {
-          // @ts-expect-error
-          swiper.slideTo(this.clickedIndex);
-        },
-      },
-    });
+    },
   });
+  // });
 </script>
